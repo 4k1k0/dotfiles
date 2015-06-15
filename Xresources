@@ -8,12 +8,13 @@ Xft.hinting: true
 Xft.antialias: 1
 Xft.dpi: 96
 Xft.rgba: rgb
-Xcursor*theme: Vanilla-DMZ
+!Xcursor*theme: Vanilla-DMZ
+Xcursor*theme: xcursor-vanilla-dmz
 ! {{{ URxvt
 URxvt*imLocale: es_MX.UTF-8
 URxvt*loginShell: true
 URxvt*saveLines: 10000
-URxvt*geometry: 88x24
+URxvt*geometry: 84x25
 URxvt*iconFile: /usr/share/icons/Flattr/apps/scalable/terminal.svg
 URxvt*scrollBar: false
 URxvt*secondaryScroll: false
@@ -46,26 +47,34 @@ URxvt.italicFont: xft:GohuFont:Italic:size=11:antialias=true:hinting=true
 !-------------------------------------------------------------------------------
 ! Colours
 
-urxvt.foreground: 	#707070
-urxvt.background: 	#f3f3f3
-urxvt.cursorColor:  #e4e4e4
-urxvt.color0:       #d3d3d3
-urxvt.color8:       #b3b3b3
-urxvt.color1:       #EF6B7B
-urxvt.color9:       #ED5466
-urxvt.color2:       #A1D569
-urxvt.color10:      #AFDB80
-urxvt.color3:       #f59335
-urxvt.color11:      #f59335
-urxvt.color4:       #4EC2E8
-urxvt.color12:      #5DC7EA1
-urxvt.color5:       #fec7cd
-urxvt.color13:      #d2a4b4
-urxvt.color6:       #95c1c0
-urxvt.color14:      #75A1A0
-urxvt.color7:       #707070
-urxvt.color15:      #909090
-
+! special
+urxvt.foreground:   #cccdcf
+urxvt.background:   #22262f
+urxvt.cursorColor:  #cccdcf
+! black
+urxvt.color0:       #33363f
+urxvt.color8:       #66696f
+! red
+urxvt.color1:       #803c3c
+urxvt.color9:       #b35959
+! green
+urxvt.color2:       #758040
+urxvt.color10:      #a4b359
+! yellow
+urxvt.color3:       #806740
+urxvt.color11:      #b39559
+! blue
+urxvt.color4:       #406980
+urxvt.color12:      #5995b3
+! magenta
+urxvt.color5:       #804d66
+urxvt.color13:      #b36b8f
+! cyan
+urxvt.color6:       #408060
+urxvt.color14:      #59b386
+! white
+urxvt.color7:       #999a9f
+urxvt.color15:      #cccdcf
 
 !-------------------------------------------------------------------------------
 ! Dzen

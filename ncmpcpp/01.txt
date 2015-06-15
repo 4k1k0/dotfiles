@@ -1,0 +1,70 @@
+mpd_music_dir = 		"~/Música"
+mpd_host = 				"localhost"
+mpd_port = 				"6600"
+ask_before_clearing_playlists = "no"
+###
+##########################
+##########################
+
+
+# █▓▒░ Visualizer
+visualizer_look = "•░"
+visualizer_color = "blue"
+visualizer_in_stereo = "no"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_sync_interval = "30"
+visualizer_output_name = "mpd spectrum"
+#visualizer_type = "frequency spectrum"
+
+# # █▓▒░ Display Settings
+active_column_color = "red"
+autocenter_mode = "yes"
+centered_cursor = "yes"
+colors_enabled = "yes"
+discard_colors_if_item_is_selected = "yes"
+header_visibility = "no"
+main_window_color = "white"
+main_window_highlight_color = "blue"
+mouse_support = "no"
+now_playing_prefix = "> "
+#now_playing_suffix = ""
+playlist_display_mode = "classic"
+progressbar_color = "blue"
+progressbar_elapsed_color = "blue"
+#progressbar_look = "▒▓░"
+progressbar_look = "░░ "
+statusbar_color = "black"
+statusbar_visibility = "yes"
+state_line_color = "red"
+song_list_format = "{$7%a $6> $5}{%t$6$R$b} [{%l}]"
+song_status_format = "$7%a $6$b> $5%t $6$b> $2%b$6"
+titles_visibility = "no"
+user_interface = "classic"
+
+# █▓▒░ cheat sheet
+# %l - length
+# %f - filename
+# %D - directory
+# %a - artist
+# %t - title
+# %b - album
+# %y - year
+# %n - track number (01/12 -> 01)
+# %N - full track info (01/12 -> 01/12)
+# %g - genre
+# %c - composer
+# %p - performer
+# %d - disc
+# %C - comment
+# $R - begin right alignment
+# █▓▒░ colors
+# $0 - default window color
+# $1 - black
+# $2 - red
+# $3 - green
+# $4 - yellow
+# $5 - blue
+# $6 - magenta
+# $7 - cyan
+# $8 - white
+# $9 - end of current color
