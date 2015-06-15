@@ -83,7 +83,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "Nya", "Nyanpasu", "Nipah" }, s, layouts[1])
+    tags[s] = awful.tag({ "アスカ", "シャンプ", "アキコ", "キョコ" }, s, layouts[1])
 end
 -- }}}
 
