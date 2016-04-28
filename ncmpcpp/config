@@ -1,6 +1,6 @@
-mpd_music_dir = 		"~/Música"
-mpd_host = 				"localhost"
-mpd_port = 				"6600"
+mpd_music_dir = 		"/media/datos/Musica/"
+mpd_host = 			"localhost"
+mpd_port = 			"6600"
 ask_before_clearing_playlists = "no"
 ###
 ##########################
@@ -9,11 +9,12 @@ ask_before_clearing_playlists = "no"
 
 # █▓▒░ Visualizer
 visualizer_look = "•░"
-visualizer_color = "blue"
+visualizer_color = "{blue, magenta, cyan, red, yellow}"
 visualizer_in_stereo = "no"
 visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_sync_interval = "30"
-visualizer_output_name = "mpd spectrum"
+#visualizer_output_name = "mpd spectrum"
+visualizer_type = spectrum
 #visualizer_type = "frequency spectrum"
 
 # # █▓▒░ Display Settings
@@ -31,8 +32,7 @@ now_playing_prefix = "> "
 playlist_display_mode = "classic"
 progressbar_color = "blue"
 progressbar_elapsed_color = "blue"
-#progressbar_look = "▒▓░"
-progressbar_look = "░░ "
+progressbar_look = "__ "
 statusbar_color = "black"
 statusbar_visibility = "yes"
 state_line_color = "red"

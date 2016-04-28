@@ -1,8 +1,24 @@
-dotfiles
+My dotfiles
 ========
 
-My dotfiles
+What does it mean to be human?
 
-My personal dotfiles.
-You can use them if you like.
-![Screenshot](http://i.imgur.com/rN7ie75.png)
+What does it mean to be human?
+
+What does it mean to be human?
+
+What does it mean to be human?
+
+What does it mean to be human?
+
+What does it mean to be human?
+
+What does it mean to be human?
+
+What does it mean to be human?
+
+What does it mean to be human?
+
+What does it mean to be human?
+
+![Screenshot](https://i.imgur.com/rCePD94.png)

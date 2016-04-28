@@ -1,0 +1,18 @@
+sw_volume: 100
+audio_device_state:1:My Sound Card
+audio_device_state:1:my_fifo
+state: play
+current: 0
+time: 119.942000
+random: 0
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:7th Sisters/Tokyo 7th Sisters - H-A-J-I-M-A-L-B-U-M-!!/Disc 1/01 - H-A-J-I-M-A-R-I-U-T-A-!!.mp3
+1:7th Sisters/Tokyo 7th Sisters - H-A-J-I-M-A-L-B-U-M-!!/Disc 1/02 - Cocoro Magical.mp3
+2:7th Sisters/Tokyo 7th Sisters - H-A-J-I-M-A-L-B-U-M-!!/Disc 1/03 - KILLER TUNER.mp3
+playlist_end
