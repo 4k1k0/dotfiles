@@ -14,8 +14,8 @@ Xcursor*theme: xcursor-vanilla-dmz
 URxvt*imLocale: es_MX.UTF-8
 URxvt*loginShell: true
 URxvt*saveLines: 10000
-URxvt*geometry: 84x25
-URxvt*iconFile: /usr/share/icons/Flattr/apps/scalable/terminal.svg
+URxvt*geometry: 85x26
+URxvt*iconFile: /usr/share/icons/breeze/apps/48/utilities-terminal.svg
 URxvt*scrollBar: false
 URxvt*secondaryScroll: false
 URxvt*cursorBlink: false
@@ -38,6 +38,11 @@ URxvt.clipboard.copycmd: xcmenu -ci
 !URxvt.clipboard.pastecmd: xcmenu --get
 URxvt*keysym.F11: perl:fullscreen:switch
 ! }}}
+! {{{ Transparency
+URxvt.transparent: true
+URxvt.shading: 10
+URxvt.fading: 40
+! }}}
 !-------------------------------------------------------------------------------
 ! {{{ Fonts
 URxvt.font: xft:GohuFont:Regular:size=11:antialias=true:hinting=true
@@ -48,33 +53,35 @@ URxvt.italicFont: xft:GohuFont:Italic:size=11:antialias=true:hinting=true
 ! Colours
 
 ! special
-urxvt.foreground:   #cccdcf
-urxvt.background:   #22262f
+urxvt.foreground:   #FFFFFF
+urxvt.background:   #2D2D2D
 urxvt.cursorColor:  #cccdcf
 ! black
-urxvt.color0:       #33363f
-urxvt.color8:       #66696f
+urxvt.color0:       #1A1A1A
+urxvt.color8:       #686868
 ! red
-urxvt.color1:       #803c3c
-urxvt.color9:       #b35959
+urxvt.color1:       #FE8181
+urxvt.color9:       #FB9F9F
 ! green
-urxvt.color2:       #758040
-urxvt.color10:      #a4b359
+urxvt.color2:       #35BF5C
+urxvt.color10:      #6BD689
 ! yellow
-urxvt.color3:       #806740
-urxvt.color11:      #b39559
+urxvt.color3:       #FFF373
+urxvt.color11:      #FEF3B2
 ! blue
-urxvt.color4:       #406980
-urxvt.color12:      #5995b3
+urxvt.color4:       #63ACE5
+urxvt.color12:      #ADCBE3
 ! magenta
-urxvt.color5:       #804d66
-urxvt.color13:      #b36b8f
+urxvt.color5:       #AC7BDE
+urxvt.color13:      #E5B0FF
 ! cyan
-urxvt.color6:       #408060
-urxvt.color14:      #59b386
+urxvt.color6:       #5DCCC1
+urxvt.color14:      #96EAD7
 ! white
-urxvt.color7:       #999a9f
-urxvt.color15:      #cccdcf
+urxvt.color7:       #D6D6D6
+urxvt.color15:      #FFFFFF
+
+
 
 !-------------------------------------------------------------------------------
 ! Dzen
