@@ -8,5 +8,15 @@
 "amixer set Master toggle"
 	XF86AudioMute
 ###############################
-
-
+#Captura de pantalla
+"xfce4-screenshooter"
+	Print
+#Bloquear pantalla
+"i3lock -i ~/.lock.png"
+	XF86ScreenSaver
+#Brillo de pantalla +
+"xbacklight -inc 10"
+	XF86MonBrightnessUp
+#Brillo de pantalla -
+"xbacklight -dec 10"
+	XF86MonBrightnessDown
