@@ -4,8 +4,6 @@ echo "Introduce la extensión de los archivos"
 read extt
 echo "Introduce un nombre para el renombrado e.g. 'Foto'"
 read nombre
-echo "Introduce un valor para empezar con el renombrado e.g. '10'"
-read valor
 
 for i in *.$extt
 do 
@@ -14,13 +12,12 @@ done
 
 for fichero in `ls *.$extt`
 do
-	mv $fichero $nombre$valor.$extt
-	let valor++
+	let v++
+	mv $fichero ___$v.$extt
 done
- 
-echo "Ficheros renombrados:"
- 
+
 for fichero in `ls *.$extt`
 do
-	echo $fichero
+	let valor++
+	mv $fichero "${nombre%}_$valor.$extt"
 done
