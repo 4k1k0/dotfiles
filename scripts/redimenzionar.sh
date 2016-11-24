@@ -1,17 +1,46 @@
 #!/bin/bash
 clear
-echo "Introduce la extensión original de los archivos"
-read extt
-echo "Introduce el ancho de la nueva imagen"
-read ancho
-echo "Introduce el largo de la nueva imagen"
-read largo
 
-mkdir resultados
+mensajes(){
+	ok=true
+	
+	echo "What do you want to set: (w)idth or (h)eight ?"
+	read set
+	if ( [ $set == 'w' ] || [ $set == 'W' ] ); then
+		set='W'
+	elif ( [ $set == 'h' ] || [ $set == 'H' ] ); then
+		set='H'
+	else
+		ok=false
+	fi
+	
+	if [ "$ok" == true ]; then
+		echo "Please enter a value "
+		read pixel
+		resize "!@"
+	else
+		error "!@"
+	fi
+}
 
-for i in *.$extt
-do
-	echo "Convirtiendo $i "
-	convert "$i" -resize $ancho $largo "${i%.*}_.$extt"
-	mv "${i%.*}_.$extt" resultados/
-done
+resize(){
+	if [ "$set" == 'W' ]; then
+		for i in *.png
+		do
+			echo "Resizing $i"
+			convert "$i" -resize "$pixel"x "{$i%.*}_.png"
+		done
+	elif [ "$set" == 'H' ]; then
+		for i in *.png
+		do
+			echo "Resizing $i"
+			convert "$i" -resize x$pixel "{$i%.*}_.png"
+		done
+	fi
+}
+
+error(){
+	echo "Something went wrong"
+}
+
+mensajes "$@"
