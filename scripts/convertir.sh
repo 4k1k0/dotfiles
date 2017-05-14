@@ -9,7 +9,7 @@ mkdir resultados
 
 for i in *.$extt
 do
-	echo "Convirtiendo $i a ${i%.*}.$extnueva"
-	convert "$i" "${i%.*}.$extnueva"
-	mv "${i%.*}.$extnueva" resultados/
+    echo "Convirtiendo $i a ${i%.*}.$extnueva"
+    convert "$i" "${i%.*}.$extnueva"
+    mv "${i%.*}.$extnueva" resultados/
 done

@@ -7,17 +7,17 @@ read nombre
 
 for i in *.$extt
 do 
-	mv "$i" `echo "$i" | tr ' ' '_'`;
+    mv "$i" `echo "$i" | tr ' ' '_'`;
 done
 
 for fichero in `ls *.$extt`
 do
-	let v++
-	mv $fichero ___$v.$extt
+    let v++
+    mv $fichero ___$v.$extt
 done
 
 for fichero in `ls *.$extt`
 do
-	let valor++
-	mv $fichero "${nombre%}_$valor.$extt"
+    let valor++
+    mv $fichero "${nombre%}_$valor.$extt"
 done
