@@ -10,6 +10,13 @@
 #Play/Pause
 "mpc toggle"
 	XF86AudioPlay
+# Next
+"mpc next"
+	Mod4 + KP_Right
+# Back
+"mpc prev"
+	Mod4 + KP_Left 
+# Back
 ###############################
 #Captura de pantalla
 "xfce4-screenshooter"
@@ -23,3 +30,9 @@
 #Brillo de pantalla -
 "xbacklight -dec 10"
 	XF86MonBrightnessDown
+# Prender torrents
+"transmission-daemon"
+	Mod4 + KP_Down
+# Apagar torrents
+"killall transmission-daemon"
+	Mod4 + KP_Up

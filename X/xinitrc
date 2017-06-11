@@ -47,4 +47,6 @@ nitrogen --restore &
 xbindkeys &
 mpd &
 exec i3
-#exec startxfce4
+#exec tint2 &
+#nm-applet &
+#exec openbox

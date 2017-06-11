@@ -4,17 +4,6 @@ clear
 mensajes(){
     ok=true
     
-    echo "¿Quieres apagar la pantalla de la laptop? Sí (s) No (n) "
-    read aP
-
-    if ( [ $aP == 's' ] || [ $aP == 'S' ] ); then
-        aP='S'
-    elif ( [ $aP == 'n' ] || [ $aP == 'N' ] ); then
-        aP='N'
-    else
-        ok=false
-    fi
-    
     echo "¿Qué salida de video quieres usar? HDMI (h) VGA (v) "
     read sV
     
@@ -22,6 +11,17 @@ mensajes(){
         sV='H'
     elif ( [ $sV == 'v' ] || [ $sV == 'V' ] ); then
         sV='V'
+    else
+        ok=false
+    fi
+    
+    echo "¿Quieres apagar la pantalla de la laptop? Sí (s) No (n) "
+    read aP
+
+    if ( [ $aP == 's' ] || [ $aP == 'S' ] ); then
+        aP='S'
+    elif ( [ $aP == 'n' ] || [ $aP == 'N' ] ); then
+        aP='N'
     else
         ok=false
     fi
@@ -38,14 +38,39 @@ apagar(){
         xrandr --output LVDS1 --off
         if ( [ $sV == 'H' ] ); then
             xrandr --output HDMI1 --auto --primary
+			nitrogen --restore
+
         elif ( [ $sV == 'V' ] ); then
             xrandr --output VGA1 --auto --primary
+			nitrogen --restore
         fi
     elif [ $aP == 'N' ]; then
+    
+		echo "¿Deseas duplicar la pantalla? Sí (s) No (n)"
+		read espejo
+    
+    if ( [ $espejo == 's' ] || [ $espejo == 'S' ] ); then
+      espejo='S'
+    elif ( [ $espejo == 'n' ] || [ $espejo == 'N' ] ); then
+      espejo='N'
+    else
+      error "!@"
+    fi
+
         if ( [ $sV == 'H' ] ); then
-            xrandr --output HDMI1 --auto --right-of LVDS1
+          if ( [$espejo == 'S'] ); then
+            xrandr --output HDMI1 --auto
+          else
+            xrandr --output HDMI1 --auto --left-of LVDS1
+			nitrogen --restore
+          fi
         elif ( [ $sV == 'V' ] ); then
-            xrandr --output VGA1 --auto --right-of LVDS1
+          if ( [ $espejo == 'S' ] ); then
+            xrandr --output VGA1 --auto
+          else
+            xrandr --output VGA1 --auto --left-of LVDS1
+			nitrogen --restore
+          fi
         fi
     fi
 }
