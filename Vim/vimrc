@@ -1,0 +1,119 @@
+" Akko's vimrc settings'"
+" 
+" [1] Plugins Installation
+" [2] Color Scheme
+" [3] General 
+" [4] Shortcuts 
+" [5] Plugins Configuration 
+
+" <!-- [1] Plugins Installation
+" 
+
+" vim-plug is not installed
+if empty(glob("~/.vim/autoload/plug.vim"))
+    silent !curl -fLso ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall
+end
+
+call plug#begin('~/.vim/plugged/')
+
+" General
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'ap/vim-buftabline'
+Plug 'mattn/emmet-vim'
+
+" Languages
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
+Plug 'alvan/vim-closetag'
+
+" Color scheme
+Plug 'morhetz/gruvbox'
+
+call plug#end()
+" 
+" -->  [1] Plugins Installation
+
+" <!-- [2] Color Scheme
+" 
+" Are we supporting colors?
+if &t_Co > 2 || has("gui_running")
+   syntax on
+   set colorcolumn=80
+   silent! color gruvbox
+   set background=dark
+endif
+
+" Extra fancyness if full pallete is supported.
+if &t_Co >= 256 || has("gui_running")
+    set cursorline
+    set cursorcolumn
+endif
+" 
+" --> [2] Color Scheme
+
+" <!-- [3] General
+" 
+" Goodbye vi
+set nocompatible
+set history=1000
+set noswapfile
+set nobackup 
+
+" Modify indenting settings
+" 
+set autoindent
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+" Some programming languages work better when only 2 spaces padding is used.
+" 
+autocmd FileType html,css,sass,scss,javascript setlocal sw=2 sts=2
+autocmd FileType json setlocal sw=2 sts=2
+autocmd FileType ruby,eruby setlocal sw=2 sts=2
+autocmd FileType yaml setlocal sw=2 sts=2
+
+" Other options
+" 
+set encoding=utf-8
+set backspace=indent,eol,start
+set hidden
+set colorcolumn=1000
+
+" Number line, switch between relative and absolute.
+"
+set relativenumber
+nmap <F5> :set relativenumber! number!<CR>
+imap <F5> <ESC>:set relativenumber! number!<CR>a
+" 
+" --> [3] General
+
+" <-- [4] Shortcuts
+" 
+" One key to rule them all.
+" 
+let mapleader=","
+
+" Window navigatoin
+" 
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+" 
+" --> [4] Shortcuts
+
+" <-- [5] Plugins Configuration
+" 
+" NerdTree
+" 
+map <Leader>n :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
+
+" Vim-closetag
+" 
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.html.erb,*.xml.erb,*.xml"
+" 
+" --> [5] Plugins Configuration
