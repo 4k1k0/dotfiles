@@ -99,7 +99,7 @@ bindsym $mod+a focus parent
 bindsym $mod+1 workspace アスカ
 bindsym $mod+2 workspace アキコ
 bindsym $mod+3 workspace るる
-bindsym $mod+4 workspace ギャル子 
+bindsym $mod+4 workspace ギャル子
 bindsym $mod+5 workspace クリス
 bindsym $mod+6 workspace サクラ
 bindsym $mod+7 workspace コナ
