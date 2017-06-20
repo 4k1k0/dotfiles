@@ -92,7 +92,10 @@ imap <F5> <ESC>:set relativenumber! number!<CR>a
 
 " <-- [4] Shortcuts
 " 
-" One key to rule them all.
+" One key to rule them all,
+" One key to find them,
+" One key to bring them all
+" and in the darkness bind them.
 " 
 let mapleader=","
 

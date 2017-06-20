@@ -45,8 +45,6 @@ setxkbmap -model pc104 -layout latam -option grp:alt_shift_toggle &
 ##################################################
 nitrogen --restore &
 xbindkeys &
+xset -b &
 mpd &
 exec i3
-#exec tint2 &
-#nm-applet &
-#exec openbox
