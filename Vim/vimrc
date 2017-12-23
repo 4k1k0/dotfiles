@@ -27,6 +27,7 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'alvan/vim-closetag'
+Plug 'skywind3000/asyncrun.vim'
 
 " Color scheme
 Plug 'morhetz/gruvbox'
@@ -117,6 +118,31 @@ let NERDTreeQuitOnOpen=1
 
 " Vim-closetag
 " 
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.html.erb,*.xml.erb,*.xml"
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.html.erb,*.xml.erb,*.xml,*php"
 " 
+
+" AsyncRun
+"
+nnoremap <F9> :call <SID>compile_and_run()<CR>
+
+augroup SPACEVIM_ASYNCRUN
+    autocmd!
+    autocmd User AsyncRunStart call asyncrun#quickfix_toggle(8, 1)
+augroup END
+
+function! s:compile_and_run()
+    exec 'w'
+    if &filetype == 'c'
+        exec "AsyncRun! gcc % -o %<; time ./%<"
+    elseif &filetype == 'cpp'
+       exec "AsyncRun! g++ -std=c++17 % -o %<; time ./%<"
+    elseif &filetype == 'java'
+       exec "AsyncRun! javac %; time java %<"
+    elseif &filetype == 'sh'
+       exec "AsyncRun! time bash %"
+    elseif &filetype == 'python'
+       exec "AsyncRun! time python %"
+    endif
+endfunction
+
 " --> [5] Plugins Configuration
