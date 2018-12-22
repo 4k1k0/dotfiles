@@ -82,6 +82,7 @@ set encoding=utf-8
 set backspace=indent,eol,start
 set hidden
 set colorcolumn=1000
+set cm=blowfish2
 
 " Number line, switch between relative and absolute.
 "
@@ -100,12 +101,14 @@ imap <F5> <ESC>:set relativenumber! number!<CR>a
 " 
 let mapleader=","
 
-" Window navigatoin
+" Window navigation
 " 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+nnoremap <Leader>l :bn<CR>
+nnoremap <Leader>ñ :bp<CR>
 " 
 " --> [4] Shortcuts
 
