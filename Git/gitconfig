@@ -6,6 +6,7 @@
 	ch = checkout
 	bl = branch --list
 	unadd = reset HEAD --
+        ri = "!f() { git rebase -i HEAD~\"$1\"; }; f"
 [core]
 	editor = vim
 [user]
