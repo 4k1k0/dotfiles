@@ -8,6 +8,7 @@
 	unadd = reset HEAD --
         ri = "!f() { git rebase -i HEAD~\"$1\"; }; f"
         ub = "!f() { git fetch origin && git rebase origin/\"$1\"; }; f"
+        drb = "!f() { git branch -d -r origin/\"$1\"; }; f"
 [core]
 	editor = vim
 [user]
