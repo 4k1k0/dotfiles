@@ -28,6 +28,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'alvan/vim-closetag'
 Plug 'skywind3000/asyncrun.vim'
+Plug 'elixir-editors/vim-elixir'
 
 " Color scheme
 Plug 'morhetz/gruvbox'
