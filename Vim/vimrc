@@ -102,6 +102,10 @@ imap <F5> <ESC>:set relativenumber! number!<CR>a
 " 
 let mapleader=","
 
+" Close current file
+"
+nnoremap <Leader>q :bd<CR>
+
 " Window navigation
 " 
 map <C-h> <C-w>h
