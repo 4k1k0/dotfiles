@@ -22,6 +22,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-buftabline'
 Plug 'mattn/emmet-vim'
+Plug 'itchyny/lightline.vim'
 
 " Languages
 Plug 'tpope/vim-rails'
@@ -84,6 +85,7 @@ set backspace=indent,eol,start
 set hidden
 set colorcolumn=1000
 set cm=blowfish2
+set laststatus=2
 
 " Number line, switch between relative and absolute.
 "
