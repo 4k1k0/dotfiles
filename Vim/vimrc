@@ -86,6 +86,7 @@ set hidden
 set colorcolumn=1000
 set cm=blowfish2
 set laststatus=2
+set noshowmode
 
 " Number line, switch between relative and absolute.
 "
