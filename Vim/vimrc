@@ -117,6 +117,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 nnoremap <Leader>l :bn<CR>
 nnoremap <Leader>ñ :bp<CR>
+nnoremap <Leader>; :bp<CR>
 " 
 " --> [4] Shortcuts
 
