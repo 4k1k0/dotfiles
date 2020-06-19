@@ -1,0 +1,19 @@
+# Alias
+source ~/.zsh/alias.zsh
+# Editor
+export EDITOR="/usr/bin/vim"
+
+# Golang
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/Documents/Go
+export PATH=$PATH:$HOME/Documents/Go/bin
+
+# NVM
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# No corrections
+unsetopt correct_all
+
+# Starship
+eval "$(starship init zsh)"

@@ -1,4 +1,8 @@
-alias apagaren='sudo shutdown -h'
-alias espacio='df --block-size=GB'
-alias imagenes='wget -nd -H -p -A jpg,jpeg,png,gif -e robots=off'
+alias images='wget -nd -H -p -A jpg,jpeg,png,gif -e robots=off'
 alias unrar='unrar x'
+alias update="sudo apt update && sudo apt -y upgrade"
+alias cat="bat"
+alias ll="exa -l --icons --group-directories-first"
+alias ls="exa --icons --group-directories-first"
+alias htop="ytop"
+alias lc="tokei"
