@@ -94,6 +94,9 @@ set hidden
 set colorcolumn=1000
 set laststatus=2
 set noshowmode
+inoremap { {}<Esc>i
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
 
 " Number line, switch between relative and absolute.
 "
