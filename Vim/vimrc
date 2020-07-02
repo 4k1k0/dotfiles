@@ -28,7 +28,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
 
 " Languages
 Plug 'tpope/vim-endwise'
@@ -40,6 +43,21 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Color scheme
 Plug 'gruvbox-community/gruvbox'
+
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_format_strings = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_auto_sameids = 1
 
 call plug#end()
 "
@@ -167,6 +185,10 @@ let g:ale_fixers = {
 " Airline
 "
 let g:airline#extensions#tabline#enabled = 1
+
+" vim-commentary
+"
+map <Leader>c :Commentary<CR>
 
 " Autoreload file when change git branc
 "
