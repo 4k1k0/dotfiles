@@ -10,12 +10,12 @@ export PATH=$PATH:$HOME/Documents/Go/bin
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+# Alias
+source ~/.zsh/alias.zsh
+source ~/.zsh/functions.zsh
+
 # No corrections
 unsetopt correct_all
 
 # Starship
 eval "$(starship init zsh)"
-
-# Alias
-source ~/.zsh/alias.zsh
-source ~/.zsh/functions.zsh

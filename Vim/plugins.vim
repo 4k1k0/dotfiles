@@ -13,7 +13,7 @@ Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plug 'ThePrimeagen/vim-be-good'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'

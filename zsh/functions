@@ -1,5 +1,5 @@
 # Si hay posibilidad de renombrar a pass hacerlo
-pass() { head /dev/urandom | tr -dc A-Za-z0-9 | head -c "$1" ; echo ''; }
+pass() { head /dev/urandom | tr -dc 'A-Za-z0-9_!#$%&/()=?+-' | head -c "$1" ; echo ''; }
 
 # NVM
 autoload -U add-zsh-hook
