@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/playground')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use('airblade/vim-gitgutter')
 
   use {
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
