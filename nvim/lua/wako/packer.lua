@@ -32,10 +32,10 @@ return require('packer').startup(function(use)
   use ({'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'})
 
   use('fatih/vim-go', { run = ':GoUpdateBinaries' })
-  -- use('elixir-editors/vim-elixir')
+  use('elixir-editors/vim-elixir')
   use('tpope/vim-commentary')
   use('Shougo/deoplete.nvim', { run = ':UpdateRemotePlugins' })
-  use('dense-analysis/ale')
+  -- use('dense-analysis/ale')
 
   -- LSP
   -- 
@@ -54,8 +54,18 @@ return require('packer').startup(function(use)
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-nvim-lsp'},
       {'L3MON4D3/LuaSnip'},
+
+      -- Linters Support
+      {'mfussenegger/nvim-lint'},
     }
   }
+
+  use({
+    "stevearc/conform.nvim",
+    config = function()
+      require("conform").setup()
+    end,
+  })
 
 
 end)

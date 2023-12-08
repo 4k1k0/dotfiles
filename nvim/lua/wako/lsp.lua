@@ -12,9 +12,14 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
-    'lua_ls',
+    'bashls',
+    'elixirls',
+    'elp',
     'gopls',
+    'lua_ls',
+    'marksman',
     'rust_analyzer',
+    'tsserver',
   },
 })
 
