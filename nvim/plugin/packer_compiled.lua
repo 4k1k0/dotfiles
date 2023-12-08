@@ -200,6 +200,11 @@ _G.packer_plugins = {
     path = "/Users/wako/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-gitgutter"] = {
+    loaded = true,
+    path = "/Users/wako/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
+    url = "https://github.com/airblade/vim-gitgutter"
+  },
   ["vim-go"] = {
     loaded = true,
     path = "/Users/wako/.local/share/nvim/site/pack/packer/start/vim-go",

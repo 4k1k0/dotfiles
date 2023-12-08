@@ -1,4 +1,3 @@
-require("wako.ale")
 require("wako.colors")
 require("wako.fugitive")
 require("wako.general")

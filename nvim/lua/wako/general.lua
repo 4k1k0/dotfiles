@@ -26,6 +26,7 @@ o.relativenumber = true
 o.shiftwidth = 2
 o.softtabstop = 2
 o.tabstop = 2
+o.updatetime = 50
 
 vim.g.go_def_mode="gopls"
 vim.g.go_info_mode="gopls"
