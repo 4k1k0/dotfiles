@@ -60,13 +60,4 @@ return require('packer').startup(function(use)
       {'mfussenegger/nvim-lint'},
     }
   }
-
-  use({
-    "stevearc/conform.nvim",
-    config = function()
-      require("conform").setup()
-    end,
-  })
-
-
 end)
