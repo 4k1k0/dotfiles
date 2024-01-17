@@ -1,0 +1,27 @@
+add_newline = false
+command_timeout=10000
+
+[line_break]
+disabled = true
+
+[package]
+display_private = true
+
+[cmd_duration]
+disabled = true
+
+[git_branch]
+symbol = " "
+truncation_symbol = ""
+
+[battery]
+disabled = true
+
+[golang]
+symbol = "ﳑ "
+format = "[$symbol($version)]($style) "
+
+[docker_context]
+symbol = "🐳"
+format = "[$symbol]($style) "
+style = "blue bold"
