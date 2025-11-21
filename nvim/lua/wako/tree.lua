@@ -21,6 +21,7 @@ require("nvim-tree").setup({
         { key = "u", action = "dir_up" },
       },
     },
+    relativenumber = true,
   },
   sort_by = "case_sensitive",
 })

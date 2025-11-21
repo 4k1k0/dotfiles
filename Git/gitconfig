@@ -12,6 +12,7 @@
   dd = "!f() { git branch -D \"$1\" && git branch -d -r origin/\"$1\"; }; f"
   new = "!f() { git init && git symbolic-ref HEAD refs/heads/\"$1\" && touch .gitignore .gitattributes && echo \"node_modules\" >> .gitignore && git add . && git commit -m \"Init\"; }; f"
   st = "!f() { git for-each-ref --sort=creatordate --format='| %(creatordate:short) | %(refname:lstrip=2)\t|%(if)%(taggeremail)%(then) %(taggeremail)%(else) %(authoremail)%(end)\t|' refs/tags; }; f | column -t"
+  pt = "!f() { git push origin $(git rev-parse --abbrev-ref HEAD); }; f"
 [core]
   editor = vim
   autocrlf = input
