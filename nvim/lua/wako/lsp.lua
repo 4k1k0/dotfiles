@@ -1,11 +1,9 @@
 local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
   lsp_zero.default_keymaps({
     buffer = bufnr,
-    preserver_mappings = false
+    preserve_mappings = false
   })
 end)
 
@@ -19,14 +17,9 @@ require('mason-lspconfig').setup({
     'lua_ls',
     'marksman',
     'rust_analyzer',
-    'tsserver',
+    'ts_ls',
   },
 })
-
----
--- Replace these language servers
--- with the ones you have installed in your system
----
 
 require('lspconfig').gopls.setup({
   cmd = {"gopls"},
@@ -39,7 +32,16 @@ require('lspconfig').gopls.setup({
   }
 })
 
-lsp_zero.setup_servers({'lua_ls', 'rust_analyzer'})
+lsp_zero.setup_servers({
+  'bashls',
+  'elixirls',
+  'elp',
+  'gopls',
+  'lua_ls',
+  'marksman',
+  'rust_analyzer',
+  'ts_ls',
+})
 
 ---
 -- Completition
