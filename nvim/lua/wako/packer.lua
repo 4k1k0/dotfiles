@@ -12,8 +12,11 @@ return require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
     requires = {
-      {'nvim-lua/plenary.nvim'},
       {'BurntSushi/ripgrep'},
+      {'nvim-lua/plenary.nvim'},
+      {'nvim-lua/plenary.nvim'},
+      {'nvim-lua/popup.nvim'},
+      {'nvim-telescope/telescope-media-files.nvim'},
     }
   }
 
@@ -33,6 +36,7 @@ return require('packer').startup(function(use)
   use ({'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'})
 
   use('fatih/vim-go', { run = ':GoUpdateBinaries' })
+  use('rust-lang/rust.vim')
   use('elixir-editors/vim-elixir')
   use('tpope/vim-commentary')
   use('Shougo/deoplete.nvim', { run = ':UpdateRemotePlugins' })
