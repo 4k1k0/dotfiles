@@ -36,8 +36,18 @@ return require('packer').startup(function(use)
   use ({'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'})
 
   use('fatih/vim-go', { run = ':GoUpdateBinaries' })
-  use('rust-lang/rust.vim')
+
+  use({
+    'rust-lang/rust.vim',
+    requires = {
+      'mrcjkb/rustaceanvim',
+      version = '^6', -- Recommended
+      lazy = false, -- This plugin is already lazy
+    }
+  })
+
   use('elixir-editors/vim-elixir')
+
   use('tpope/vim-commentary')
   use('Shougo/deoplete.nvim', { run = ':UpdateRemotePlugins' })
   -- use('dense-analysis/ale')

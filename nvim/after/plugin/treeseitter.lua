@@ -1,5 +1,14 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "elixir", "erlang", "go", "rust", "lua", "vim", "typescript" },
+  ensure_installed = {
+    "c",
+    "elixir",
+    "erlang",
+    "go",
+    "lua",
+    "rust",
+    "typescript",
+    "vim",
+  },
   sync_install = false,
   auto_install = true,
   highlight = {
