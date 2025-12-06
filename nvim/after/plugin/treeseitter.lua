@@ -4,6 +4,7 @@ require'nvim-treesitter.configs'.setup {
     "elixir",
     "erlang",
     "go",
+    "heex",
     "lua",
     "rust",
     "typescript",

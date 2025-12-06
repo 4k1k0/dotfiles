@@ -1,4 +1,6 @@
 require("wako.colors")
+require("wako.cmp")
+require("wako.comment")
 require("wako.conform")
 require("wako.fugitive")
 require("wako.general")

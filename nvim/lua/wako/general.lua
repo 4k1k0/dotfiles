@@ -39,4 +39,3 @@ vim.api.nvim_create_autocmd(
     command = "if mode() != 'c' | checktime | endif",
   }
 )
-

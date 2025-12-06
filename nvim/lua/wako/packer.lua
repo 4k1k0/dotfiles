@@ -26,8 +26,7 @@ return require('packer').startup(function(use)
   -- UI/Aesthetics
   use {
     'nvim-tree/nvim-tree.lua',
-    requires = { 'nvim-tree/nvim-web-devicons' },
-    tag = 'nightly'
+    requires = { 'nvim-tree/nvim-web-devicons' }
   }
   use {
     'nvim-lualine/lualine.nvim',
@@ -39,25 +38,27 @@ return require('packer').startup(function(use)
   use('fatih/vim-go', { run = ':GoUpdateBinaries' })
   use('rust-lang/rust.vim')
   use('elixir-editors/vim-elixir')
-  use('tpope/vim-commentary')
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
 
   -- LSP CORE (Define these once and up front)
   use {'neovim/nvim-lspconfig'}
-  use {'williamboman/mason.nvim'}
-  use {'williamboman/mason-lspconfig.nvim'}
+  use {'mason-org/mason.nvim'}
+  use {'mason-org/mason-lspconfig.nvim'}
   use {'L3MON4D3/LuaSnip'} -- Snippets
   use {'mfussenegger/nvim-lint'} -- Linters
 
-  -- Completion CORE (Required by lsp-zero)
-  use {'hrsh7th/nvim-cmp'}
+  -- Completion CORE.
+  use {'hrsh7th/cmp-buffer'}
+  use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/cmp-nvim-lsp'}
-
-
-  -- LSP CLIENT MANAGERS
-  use {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v3.x',
-  }
+  use {'hrsh7th/cmp-path'}
+  use {'hrsh7th/nvim-cmp'}
+  use {'neovim/nvim-lspconfig'}
 
   use({
     'mrcjkb/rustaceanvim',
