@@ -1,0 +1,64 @@
+[alias]
+  lg = log --oneline --decorate --all --graph --pretty=format:'%C(blue bold)%h %Creset%C(yellow bold)%d %Creset%s %C(red bold)(%ae)%Creset%C(blue bold)[%ad]'
+  s = status -sb
+  oops = checkout --
+  db = branch -D
+  ch = checkout
+  bl = branch --list
+  unadd = reset HEAD --
+  ri = "!f() { git rebase -i HEAD~\"$1\"; }; f"
+  ub = "!f() { git fetch origin && git rebase origin/\"$1\"; }; f"
+  drb = "!f() { git branch -d -r origin/\"$1\"; }; f"
+  dd = "!f() { git branch -D \"$1\" && git branch -d -r origin/\"$1\"; }; f"
+  new = "!f() { git init && git symbolic-ref HEAD refs/heads/\"$1\" && touch .gitignore .gitattributes && echo \"node_modules\" >> .gitignore && git add . && git commit -m \"Init\"; }; f"
+  st = "!f() { git for-each-ref --sort=creatordate --format='| %(creatordate:short) | %(refname:lstrip=2)\t|%(if)%(taggeremail)%(then) %(taggeremail)%(else) %(authoremail)%(end)\t|' refs/tags; }; f | column -t"
+  pt = "!f() { git push origin $(git rev-parse --abbrev-ref HEAD); }; f"
+[core]
+  editor = vim
+  autocrlf = input
+[user]
+  name = Rodrigo Patiño
+  email = developer.rodrigo.patino@gmail.com
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[init]
+  defaultBranch = main
+
+# Diff with delta
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    side-by-side = truw
+    line-numbers = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
