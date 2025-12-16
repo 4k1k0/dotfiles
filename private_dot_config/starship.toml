@@ -1,0 +1,33 @@
+add_newline = false
+command_timeout=10000
+
+[line_break]
+disabled = true
+
+[package]
+display_private = true
+disabled = true
+
+[cmd_duration]
+disabled = true
+
+[git_branch]
+symbol = "\ue702 "
+truncation_symbol = ""
+
+[battery]
+disabled = true
+
+[nodejs]
+symbol = "\ued0d "
+format = "[$symbol($version)]($style) "
+
+[golang]
+symbol = "\ue627 "
+format = "[$symbol($version)]($style) "
+
+[docker_context]
+symbol = "\uf21f "
+format = "[$symbol]($style) "
+style = "blue bold"
+
