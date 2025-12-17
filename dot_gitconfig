@@ -14,7 +14,7 @@
   st = "!f() { git for-each-ref --sort=creatordate --format='| %(creatordate:short) | %(refname:lstrip=2)\t|%(if)%(taggeremail)%(then) %(taggeremail)%(else) %(authoremail)%(end)\t|' refs/tags; }; f | column -t"
   pt = "!f() { git push origin $(git rev-parse --abbrev-ref HEAD); }; f"
 [core]
-  editor = vim
+  editor = nvim
   autocrlf = input
 [user]
   name = Rodrigo Patiño
