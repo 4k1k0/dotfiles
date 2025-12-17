@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env zsh
 
 # Function for MacOS logic
 execMacos() {
