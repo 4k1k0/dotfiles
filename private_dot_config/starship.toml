@@ -31,3 +31,13 @@ symbol = "\uf21f "
 format = "[$symbol]($style) "
 style = "blue bold"
 
+[erlang]
+symbol = "\ue7b1 "
+format = "[$symbol($version)]($style) "
+
+[elixir]
+symbol = "\ue7cd "
+format = "[$symbol($version OTP $otp_version)]($style) "
+
+[rust]
+symbol = "\ue7a8 "
