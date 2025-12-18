@@ -18,12 +18,12 @@ execMacos() {
     local eth_status=$(networksetup -listnetworkserviceorder | grep -E "Ethernet|LAN" -A 1 | grep "Device: en" | cut -d: -f3 | tr -d ')')
     for dev in $eth_status; do
         if ifconfig "$dev" 2>/dev/null | grep -q "status: active"; then
-            echo "Ethernet"
+            echo "Ethernet 󰱓"
             return
         fi
     done
 
-    echo "Disconnected"
+    echo "Disconnected 󰅛"
 }
 
 # Function for Linux logic
