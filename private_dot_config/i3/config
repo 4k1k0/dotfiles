@@ -156,25 +156,26 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    position top
-	workspace_buttons yes
-	#separator_symbol “/”
-	##”Widgets” de la barra
-	status_command i3status –config ~/.config/i3/i3status/config
+ position top
+ workspace_buttons yes
+ #separator_symbol “/”
 
-	colors {
-		background #333333
-		statusline #ffffff
-		separator  #222222
+ ## bar widgets
+ status_command i3status –config ~/.config/i3/i3status/config
 
-		#propiedad         #bordes #bg     #letra
-		focused_workspace  #ff9c9f #ff9c9f #333333
-		inactive_workspace #333333 #333333 #ffffff
-		urgent_workspace   #ace1f3 #ace1f3 #ffffff
-	}
-	
-	font -misc-fixed-medium-r-normal–13-120-75-75-C-70-iso10646-1
-	font pango:GohuFont uni14 Nerd Font Mono
+ colors {
+  background #333333
+  statusline #ffffff
+  separator  #222222
+
+  #propiedad         #bordes #bg     #letra
+  focused_workspace  #ff9c9f #ff9c9f #333333
+  inactive_workspace #333333 #333333 #ffffff
+  urgent_workspace   #ace1f3 #ace1f3 #ffffff
+ }
+ 
+ font -misc-fixed-medium-r-normal–13-120-75-75-C-70-iso10646-1
+ font pango:GohuFont uni14 Nerd Font Mono
 
 }
 
