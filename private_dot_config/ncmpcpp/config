@@ -1,19 +1,6 @@
-mpd_music_dir =                 "/home/wako/Data/Music"
-mpd_host =                      "localhost"
+mpd_host =                      "192.168.0.3"
 mpd_port =                      "6600"
 ask_before_clearing_playlists = "no"
-
-# Visualizer
-visualizer_look = "•░"
-visualizer_color = "blue, magenta, cyan, red, yellow, green"
-visualizer_in_stereo = "yes"
-visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_sync_interval = "30"
-visualizer_output_name = "mpd spectrum"
-visualizer_type = "spectrum"
-#visualizer_type = "wave"
-#visualizer_type = "wave_filled"
-#visualizer_type = "ellipse"
 
 # Display Settings
 current_item_inactive_column_prefix = "$(magenta)$r"
