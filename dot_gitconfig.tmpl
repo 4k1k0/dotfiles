@@ -1,24 +1,24 @@
 [alias]
-  lg = log --oneline --decorate --all --graph --pretty=format:'%C(blue bold)%h %Creset%C(yellow bold)%d %Creset%s %C(red bold)(%ae)%Creset%C(blue bold)[%ad]'
-  s = status -sb
-  oops = checkout --
-  db = branch -D
-  ch = checkout
   bl = branch --list
-  unadd = reset HEAD --
-  ri = "!f() { git rebase -i HEAD~\"$1\"; }; f"
-  ub = "!f() { git fetch origin && git rebase origin/\"$1\"; }; f"
-  drb = "!f() { git branch -d -r origin/\"$1\"; }; f"
+  ch = checkout
+  db = branch -D
   dd = "!f() { git branch -D \"$1\" && git branch -d -r origin/\"$1\"; }; f"
+  drb = "!f() { git branch -d -r origin/\"$1\"; }; f"
+  lg = log --oneline --decorate --all --graph --pretty=format:'%C(blue bold)%h %Creset%C(yellow bold)%d %Creset%s %C(red bold)(%ae)%Creset%C(blue bold)[%ad]'
   new = "!f() { git init && git symbolic-ref HEAD refs/heads/\"$1\" && touch .gitignore .gitattributes && echo \"node_modules\" >> .gitignore && git add . && git commit -m \"Init\"; }; f"
-  st = "!f() { git for-each-ref --sort=creatordate --format='| %(creatordate:short) | %(refname:lstrip=2)\t|%(if)%(taggeremail)%(then) %(taggeremail)%(else) %(authoremail)%(end)\t|' refs/tags; }; f | column -t"
+  oops = checkout --
   pt = "!f() { git push origin $(git rev-parse --abbrev-ref HEAD); }; f"
+  ri = "!f() { git rebase -i HEAD~\"$1\"; }; f"
+  s = status -sb
+  st = "!f() { git for-each-ref --sort=creatordate --format='| %(creatordate:short) | %(refname:lstrip=2)\t|%(if)%(taggeremail)%(then) %(taggeremail)%(else) %(authoremail)%(end)\t|' refs/tags; }; f | column -t"
+  ub = "!f() { git fetch origin && git rebase origin/\"$1\"; }; f"
+  unadd = reset HEAD --
 [core]
   editor = nvim
   autocrlf = input
 [user]
   name = Rodrigo Patiño
-  email = developer.rodrigo.patino@gmail.com
+  email = {{ .email | quote }}
 [color]
   branch = auto
   diff = auto
@@ -51,10 +51,11 @@
     diffFilter = delta --color-only
 
 [delta]
-    navigate = true    # use n and N to move between diff sections
     light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
-    side-by-side = truw
     line-numbers = true
+    navigate = true    # use n and N to move between diff sections
+    side-by-side = true
+    theme = gruvbox-dark
 
 [merge]
     conflictstyle = diff3
