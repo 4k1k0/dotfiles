@@ -1,0 +1,2 @@
+-- vim.lsp.config('rust_analyzer',{}) // disable so we can use rustaceanvim
+-- vim.lsp.enable('rust_analyzer') // disable so we can use rustaceanvim
