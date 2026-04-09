@@ -101,10 +101,6 @@
       "rev": "cfb85dcf7f822b79224e9e6aef9e8c794211b20b",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
-    "undotree": {
-      "rev": "6fa6b57cda8459e1e4b2ca34df702f55242f4e4d",
-      "src": "https://github.com/mbbill/undotree"
-    },
     "vim-elixir": {
       "rev": "6dff29176eb35e025bc94b262bf6d4e517e11f7d",
       "src": "https://github.com/elixir-editors/vim-elixir"
