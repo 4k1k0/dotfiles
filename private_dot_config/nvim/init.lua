@@ -1,4 +1,4 @@
-require("wako.pa")
+require("wako.plugins")
 require("wako.colors")
 require("wako.cmp")
 require("wako.comment")
