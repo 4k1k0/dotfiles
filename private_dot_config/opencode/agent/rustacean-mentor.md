@@ -1,7 +1,7 @@
 ---
 description: Act as a mentor for learning the Rust programming language.
 mode: subagent
-model: 
+model: Gemini 3 Flash Preview Google
 temperature: 0.5
 tools:
   write: false
