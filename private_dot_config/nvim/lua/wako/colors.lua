@@ -37,10 +37,6 @@ function ColorGruv()
 
   -- Default options:
   require("gruvbox").setup({
-    terminal_colors = true, -- add neovim terminal colors
-    undercurl = true,
-    underline = true,
-    bold = true,
     italic = {
       strings = true,
       emphasis = true,
@@ -48,19 +44,24 @@ function ColorGruv()
       operators = false,
       folds = true,
     },
-    strikethrough = true,
+    bold = true,
+    contrast = "hard", -- can be "hard", "soft" or empty string
+    dim_inactive = false,
+    inverse = true, -- invert background for search, diffs, statuslines and errors
     invert_selection = false,
     invert_signs = false,
     invert_tabline = false,
-    inverse = true, -- invert background for search, diffs, statuslines and errors
-    contrast = "", -- can be "hard", "soft" or empty string
-    palette_overrides = {},
     overrides = {},
-    dim_inactive = false,
+    palette_overrides = {},
+    strikethrough = true,
+    terminal_colors = true, -- add neovim terminal colors
     transparent_mode = false,
+    undercurl = true,
+    underline = true,
   })
 
-  vim.cmd([[colorscheme gruvbox]])
+  vim.opt.termguicolors = true
+  vim.cmd.colorscheme("gruvbox")
 end
 
 -- ColorMyPencils()

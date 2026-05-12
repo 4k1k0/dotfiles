@@ -4,6 +4,9 @@ require'nvim-treesitter'.setup {
     "elixir",
     "erlang",
     "go",
+    "gomod",
+    "gowork",
+    "gosum",
     "heex",
     "lua",
     "rust",
@@ -17,3 +20,10 @@ require'nvim-treesitter'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "go", "lua", "rust" }, -- Add other languages as needed
+  callback = function()
+    vim.treesitter.start()
+  end,
+})
