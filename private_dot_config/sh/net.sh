@@ -1,4 +1,5 @@
-#!/bin/env zsh
+#!/usr/bin/env zsh
+source ~/.config/sh/cache.sh
 
 # Function for MacOS logic
 execMacos() {
@@ -50,20 +51,61 @@ execLinux() {
     echo "Disconnected"
 }
 
+# Function to get Windows 11 network info from inside WSL
+execWindows() {
+    # 1. Check host internet connectivity using Windows ping
+    if ! ping.exe -n 1 -w 1000 8.8.8.8 > /dev/null 2>&1; then
+        echo "Disconnected 󰅛"
+        return
+    fi
+
+    # 2. Try to harvest the Wi-Fi SSID
+    # Grabs the SSID line, splits by colon, trims whitespace, and drops Windows carriage returns (\r)
+    local wifi_ssid
+    wifi_ssid=$(netsh.exe wlan show interfaces 2>/dev/null | grep -E -i '^\s*SSID\s*:' | head -n 1 | cut -d':' -f2- | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' | tr -d '\r')
+
+    # 3. Determine interface type
+    if [ -n "$wifi_ssid" ]; then
+        echo "$wifi_ssid"
+    else
+        # If we have internet but no active Wi-Fi SSID, it's operating on Ethernet
+        echo "Ethernet 󰱓"
+    fi
+}
+
 # Orchestrator function
-exec() {
-    case "$(uname -s)" in
-        Darwin)
-            execMacos
+main() {
+    local cache_file="/tmp/sh_net_cache"
+    local ttl=10
+
+    local cached
+    cached=$(read_cache "$cache_file" "$ttl")
+    if [ $? -eq 0 ]; then
+        echo "$cached"
+        return
+    fi
+
+    local os
+    os=$(get_os)
+    local result
+    case "$os" in
+        macos)
+            result=$(execMacos)
             ;;
-        Linux)
-            execLinux
+        linux)
+            result=$(execLinux)
+            ;;
+        windows)
+            result=$(execWindows)
             ;;
         *)
-            echo "Unsupported OS"
+            result="Unsupported OS"
             ;;
     esac
+
+    write_cache "$cache_file" "$result"
+    echo "$result"
 }
 
 # Run the script
-exec
+main
