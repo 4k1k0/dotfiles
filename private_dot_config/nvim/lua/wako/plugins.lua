@@ -6,7 +6,7 @@ vim.pack.add({
 
   -- tools
   { src = 'https://github.com/airblade/vim-gitgutter'},
-  { src = 'https://github.com/numToStr/Comment.nvim'},
+  { src = 'https://github.com/nvim-mini/mini.comment', version = 'stable' },
   { src = 'https://github.com/tpope/vim-fugitive'},
 
   -- appearance

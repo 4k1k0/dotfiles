@@ -1,61 +1,40 @@
+require('mini.comment').setup({
+  -- Options which control module behavior
+  options = {
+    -- Function to compute custom 'commentstring' (optional)
+    custom_commentstring = nil,
 
-require('Comment').setup(
-  {
-    ---Add a space b/w comment and the line
-    padding = true,
-    ---Whether the cursor should stay at its position
-    sticky = true,
-    ---Lines to be ignored while (un)comment
-    ignore = nil,
-    ---LHS of toggle mappings in NORMAL mode
-    toggler = {
-        ---Line-comment toggle keymap
-        line = '<leader>c',
-        ---Block-comment toggle keymap
-        block = '<leader>C',
-    },
-    ---LHS of operator-pending mappings in NORMAL and VISUAL mode
-    opleader = {
-        ---Line-comment keymap
-        line = '<leader>c',
-        ---Block-comment keymap
-        block = '<leader>C',
-    },
-    ---LHS of extra mappings
-    extra = {
-        ---Add comment on the line above
-        above = 'gcO',
-        ---Add comment on the line below
-        below = 'gco',
-        ---Add comment at the end of line
-        eol = 'gcA',
-    },
-    ---Enable keybindings
-    ---NOTE: If given `false` then the plugin won't create any mappings
-    mappings = {
-        ---Operator-pending mapping; `gcc` `gbc` `gc[count]{motion}` `gb[count]{motion}`
-        basic = true,
-        ---Extra mapping; `gco`, `gcO`, `gcA`
-        extra = true,
-    },
-    ---Function to call before (un)comment
-    pre_hook = nil,
-    ---Function to call after (un)comment
-    post_hook = nil,
-  }
-)
+    -- Whether to ignore blank lines when commenting
+    ignore_blank_line = false,
 
-local ft = require('Comment.ft')
+    -- Whether to ignore blank lines in actions and textobject
+    start_of_line = false,
 
-ft.go = {'//%s', '//%s'}
-ft.javascript = {'//%s', '/*%s*/'}
-ft.yaml = '#%s'
-ft.rust = {'//%s', '/*%s*/'}
-ft.typescript = {'//%s', '/*%s*/'}
-ft.elixir = {'#%s', '#%s'}
-ft.erlang = {'%% %s', '%% %s'}
-ft.gleam = {'//%s', '//%s'}
-ft.lua = {'--%s', '--[[%s]]'}
-ft.sh = {'#%s', '#%s'}
-ft.python = {'#%s', '#%s'}
-ft.haskell = {'--%s', '{-%s-}'}
+    -- Whether to force single space inner padding for comment parts
+    pad_comment_parts = true,
+  },
+
+  -- Module mappings. Use `''` (empty string) to disable one.
+  mappings = {
+    -- Toggle comment on the current line (Normal mode)
+    comment_line = '<Leader>c',
+
+    -- Toggle comment on the current visual block (Visual mode)
+    comment_visual = '<Leader>c',
+
+    -- Optional: Disable the default operator-pending mapping ('gc') 
+    -- if you solely want to rely on your <leader>c mapping.
+    comment = '',
+    
+    -- Optional: Disable the default text object mapping ('gc')
+    textobject = '',
+  },
+
+  -- Hook functions to be executed at certain stage of commenting
+  hooks = {
+    -- Before successful commenting. Does nothing by default.
+    pre = function() end,
+    -- After successful commenting. Does nothing by default.
+    post = function() end,
+  },
+})
