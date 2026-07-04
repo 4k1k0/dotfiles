@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         {
           stdout_buffered = true,
           on_stdout = function (_, data)
-            print("out:", vim.inspect(data))
+            print "Check golangci-lint"
           end,
           on_stderr = function (_, _)
             print "Check golangci-lint"
