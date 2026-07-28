@@ -10,7 +10,7 @@ vim.pack.add({
   { src = 'https://github.com/tpope/vim-fugitive'},
 
   -- appearance
-  { src = 'https://github.com/akinsho/bufferline.nvim', tag = '4.*'}, 
+  { src = 'https://github.com/akinsho/bufferline.nvim', tag = '4.*'},
   { src = 'https://github.com/catppuccin/nvim', name = 'catppuccin'},
   { src = 'https://github.com/ellisonleao/gruvbox.nvim'},
   { src = 'https://github.com/nvim-telescope/telescope-media-files.nvim'},
