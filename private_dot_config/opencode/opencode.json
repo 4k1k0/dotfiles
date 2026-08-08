@@ -78,5 +78,22 @@
     "history_previous": "up",
     "history_next": "down",
     "terminal_suspend": "ctrl+z"
+  },
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "gemma4": {
+          "name": "gemma4"
+        },
+        "llama3.1": {
+          "name": "llama3.1"
+        }
+      }
+    }
   }
 }
