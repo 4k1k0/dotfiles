@@ -9,3 +9,8 @@ kp() {
   lsof -i :"$1" \
   && kill -9 $(lsof -i :"$1")
 }
+
+ddg() {
+  query=$(echo "$@" | sed 's/ /%20/')
+  w3m -no-cookie "https://duckduckgo.com/?q=$query"
+}
