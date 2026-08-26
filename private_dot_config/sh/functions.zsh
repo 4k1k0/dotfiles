@@ -1,8 +1,13 @@
 pass() { 
   export LC_CTYPE=C; export LANG=C;
-  head /dev/urandom \
-  | tr -dc 'A-Za-z0-9_!#$%&/()=?+-' \
-  | head -c "$1" ; echo ''; 
+  local output
+  output=$(head /dev/urandom \
+    | tr -dc 'A-Za-z0-9_!#$%&/()=?+-' \
+    | head -c "$1")
+  if command -v xclip >/dev/null 2>&1; then
+    echo -n "$output" | xclip -sel c
+  fi
+  echo "$output"
 }
 
 kp() {

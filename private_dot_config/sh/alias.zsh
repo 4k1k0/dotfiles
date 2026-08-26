@@ -1,6 +1,7 @@
 alias c="cd /Volumes/Nano/Code"
 alias cat="bat"
 alias gop="cd $GOPATH/src"
+alias hn="w3m https://news.ycombinator.com/"
 alias htop="btm"
 alias images='wget -nd -H -p -A jpg,jpeg,png,gif -e robots=off'
 alias kubectl="minikube kubectl --"
