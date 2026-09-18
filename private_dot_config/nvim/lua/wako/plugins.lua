@@ -8,6 +8,7 @@ vim.pack.add({
   { src = 'https://github.com/airblade/vim-gitgutter'},
   { src = 'https://github.com/nvim-mini/mini.comment', version = 'stable' },
   { src = 'https://github.com/tpope/vim-fugitive'},
+  { src = 'https://github.com/ccntrq/autoreload.nvim'},
 
   -- appearance
   { src = 'https://github.com/akinsho/bufferline.nvim', tag = '4.*'},
@@ -16,7 +17,7 @@ vim.pack.add({
   { src = 'https://github.com/nvim-telescope/telescope-media-files.nvim'},
   { src = 'https://github.com/nvim-telescope/telescope.nvim', branch = '0.2.x'},
   { src = 'https://github.com/nvim-tree/nvim-tree.lua'},
-  { src = 'https://github.com/nvim-tree/nvim-web-devicons'},
+  { src = 'https://github.com/nvim-tree/nvim-web-devicons', tag = '1.1.0'},
 
   -- lsp
   { src = 'https://github.com/L3MON4D3/LuaSnip'},
