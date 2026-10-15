@@ -1,0 +1,12 @@
+# https://github.com/giacomopiccinini/judo
+
+default = "work"
+
+[[dbs]]
+name = "work"
+connection_str = "sqlite:/home/wako/.local/share/judo/work.db"
+
+[colours]
+background = "#282828"
+foreground = "#928374"
+highlight = "#D79921"
