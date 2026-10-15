@@ -19,3 +19,17 @@ ddg() {
   query=$(echo "$@" | sed 's/ /%20/')
   w3m -no-cookie "https://duckduckgo.com/?q=$query"
 }
+
+copy() {
+    case "$(uname -s)" in
+        Darwin)
+            echo "macos"
+            ;;
+        Linux)
+            xclip -sel clip < $1
+            ;;
+        *)
+            echo "unsupported"
+            ;;
+    esac
+}
